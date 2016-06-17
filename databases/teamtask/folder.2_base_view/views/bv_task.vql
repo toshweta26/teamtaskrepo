@@ -7,7 +7,7 @@
         assignedto_0:text, 
         assignedby_0:text
     )
-    FOLDER = '/1_data_source'
+    FOLDER = '/2_base_view'
     PRIMARY KEY ( 'id' )
     CACHE OFF
     TIMETOLIVEINCACHE DEFAULT
