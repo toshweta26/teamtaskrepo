@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE DATABASE teamtask 'Team and thier tasks';
+
+ALTER DATABASE teamtask
+  CHARSET DEFAULT;
+
