@@ -4,8 +4,8 @@
         startdate:text, 
         duedate:text, 
         status:text, 
-        assignedto_0:text, 
-        assignedby_0:text
+        assignedto:text, 
+        assignedby:text
     )
     FOLDER = '/2_base_view'
     PRIMARY KEY ( 'id' )
@@ -19,10 +19,10 @@
              ADD startdate (any) OPT ANY
              ADD duedate (any) OPT ANY
              ADD status (any) OPT ANY
-             ADD assignedto_0 (any) OPT ANY
-             ADD assignedby_0 (any) OPT ANY
+             ADD assignedto (any) OPT ANY
+             ADD assignedby (any) OPT ANY
         )
-        OUTPUTLIST (assignedby_0, assignedto_0, duedate, id, startdate, status, task
+        OUTPUTLIST (assignedby, assignedto, duedate, id, startdate, status, task
         )
         WRAPPER (custom ds_task)
     );
