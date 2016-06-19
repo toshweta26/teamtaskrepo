@@ -1,5 +1,7 @@
-﻿/databases/teamtask/folder.3_derived_view/3_derived_view.vql
+﻿/databases/teamtask/folder.4_dv_of_dv/4_dv_of_dv.vql
+/databases/teamtask/folder.3_derived_view/3_derived_view.vql
 /databases/teamtask/folder.2_base_view/2_base_view.vql
 /databases/teamtask/folder.1_data_source/1_data_source.vql
 /databases/teamtask/folder.1_data_source/datasources/custom/ds_task.vql
 /databases/teamtask/folder.2_base_view/views/bv_task.vql
+/databases/teamtask/folder.3_derived_view/views/dv_task_dates.vql

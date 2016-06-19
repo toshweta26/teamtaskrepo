@@ -1,5 +1,0 @@
-﻿CREATE OR REPLACE VIEW dv_task_assigned FOLDER = '/3_derived_view' AS SELECT bv_task.id AS id, bv_task.task AS task, bv_task.status AS status, bv_task.assignedto AS assignedto_0, bv_task.assignedby AS assignedby_0 FROM bv_task;
-
-ALTER VIEW dv_task_assigned
- LAYOUT (bv_task = [20, 20, 200, 166]);
-

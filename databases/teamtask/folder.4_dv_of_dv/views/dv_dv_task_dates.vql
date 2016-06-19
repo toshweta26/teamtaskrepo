@@ -1,0 +1,6 @@
+﻿CREATE OR REPLACE VIEW dv_dv_task_dates FOLDER = '/4_dv_of_dv'
+    PRIMARY KEY ( 'id' ) AS SELECT dv_task_dates.id AS id, dv_task_dates.task AS task, dv_task_dates.startdate AS startdate, dv_task_dates.duedate AS duedate FROM dv_task_dates;
+
+ALTER VIEW dv_dv_task_dates
+ LAYOUT (dv_task_dates = [20, 20, 200, 126]);
+
