@@ -1,4 +1,4 @@
-﻿CREATE OR REPLACE VIEW dv_dv_task_assigned FOLDER = '/4_dv_of_dv' AS SELECT dv_task_assigned.id AS id, dv_task_assigned.task AS task, dv_task_assigned.assignedto_0 AS assignedto_0, dv_task_assigned.assignedby_0 AS assignedby_0 FROM dv_task_assigned;
+﻿CREATE OR REPLACE VIEW dv_dv_task_assigned FOLDER = '/4_dv_of_dv' AS SELECT dv_task_assigned.id AS id, dv_task_assigned.task AS task, dv_task_assigned.assignedto AS assignedto_0, dv_task_assigned.assignedby AS assignedby_0 FROM dv_task_assigned;
 
 ALTER VIEW dv_dv_task_assigned
  LAYOUT (dv_task_assigned = [20, 20, 200, 126]);
