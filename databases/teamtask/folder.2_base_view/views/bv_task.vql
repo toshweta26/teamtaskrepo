@@ -1,8 +1,8 @@
 ﻿CREATE OR REPLACE TABLE bv_task I18N us_pst (
         id:int, 
         task:text, 
-        startdate_0:text, 
-        duedate_0:text, 
+        startdate:text, 
+        duedate:text, 
         status:text, 
         assignedto_0:text, 
         assignedby_0:text
@@ -16,13 +16,13 @@
         CONSTRAINTS (
              ADD id (any) OPT ANY
              ADD task (any) OPT ANY
-             ADD startdate_0 (any) OPT ANY
-             ADD duedate_0 (any) OPT ANY
+             ADD startdate (any) OPT ANY
+             ADD duedate (any) OPT ANY
              ADD status (any) OPT ANY
              ADD assignedto_0 (any) OPT ANY
              ADD assignedby_0 (any) OPT ANY
         )
-        OUTPUTLIST (assignedby_0, assignedto_0, duedate_0, id, startdate_0, status, task
+        OUTPUTLIST (assignedby_0, assignedto_0, duedate, id, startdate, status, task
         )
         WRAPPER (custom ds_task)
     );
