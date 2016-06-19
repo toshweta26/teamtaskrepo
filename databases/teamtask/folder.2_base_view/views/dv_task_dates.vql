@@ -1,5 +1,5 @@
 ﻿CREATE OR REPLACE VIEW dv_task_dates FOLDER = '/2_base_view'
-    PRIMARY KEY ( 'id' ) AS SELECT bv_task.id AS id, bv_task.task AS task, bv_task.startdate_0 AS startdate, bv_task.duedate_0 AS duedate, bv_task.status AS status FROM bv_task;
+    PRIMARY KEY ( 'id' ) AS SELECT bv_task.id AS id, bv_task.task AS task, bv_task.startdate AS startdate, bv_task.duedate AS duedate, bv_task.status AS status FROM bv_task;
 
 ALTER VIEW dv_task_dates
  LAYOUT (bv_task = [20, 20, 200, 166]);
