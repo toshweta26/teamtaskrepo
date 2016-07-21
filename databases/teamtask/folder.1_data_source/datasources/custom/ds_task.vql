@@ -4,11 +4,11 @@ CREATE OR REPLACE DATASOURCE CUSTOM ds_task
     CLASSNAME='com.denodo.vdb.contrib.wrapper.xls.ExcelWrapper';
 
 CREATE OR REPLACE WRAPPER CUSTOM ds_task
-    FOLDER = '/1_data_source'
+    FOLDER = '/2_base_view'
     DATASOURCENAME=ds_task
     PARAMETERS (
       'Type of file' = 'Excel 2007 or later (*.xlsx)',
-      'File location' = ROUTE LOCAL 'LocalConnection' '${databases.teamtask.folder.1_data_source.views.custom.ds_task.File location.ROUTE.LOCAL.PATH}',
+      'File location' = ROUTE LOCAL 'LocalConnection' '${databases.teamtask.folder.2_base_view.views.custom.ds_task.File location.ROUTE.LOCAL.PATH}',
       'Worksheet' = 'Sheet1',
       'Extract data from all sheets' = false,
       'Extract sheet name as a new column' = false,
@@ -18,10 +18,10 @@ CREATE OR REPLACE WRAPPER CUSTOM ds_task
     OUTPUTSCHEMA (
         id = 'Id' : 'java.lang.Integer' (OPT) SORTABLE,
         task = 'Task' : 'java.lang.String' (OPT) SORTABLE,
-        startdate_0 = 'Start Date' : 'java.lang.String' (OPT) SORTABLE,
-        duedate_0 = 'Due Date' : 'java.lang.String' (OPT) SORTABLE,
+        startdate = 'Start Date' : 'java.lang.String' (OPT) SORTABLE,
+        duedate = 'Due Date' : 'java.lang.String' (OPT) SORTABLE,
         status = 'Status' : 'java.lang.String' (OPT) SORTABLE,
-        assignedto_0 = 'Assigned To' : 'java.lang.String' (OPT) SORTABLE,
-        assignedby_0 = 'Assigned By' : 'java.lang.String' (OPT) SORTABLE
+        assignedto = 'Assigned To' : 'java.lang.String' (OPT) SORTABLE,
+        assignedby = 'Assigned By' : 'java.lang.String' (OPT) SORTABLE
     );
 
