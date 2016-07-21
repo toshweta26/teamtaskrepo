@@ -1,0 +1,5 @@
+﻿CREATE OR REPLACE DATABASE dev_db 'development database';
+
+ALTER DATABASE dev_db
+  CHARSET DEFAULT;
+
