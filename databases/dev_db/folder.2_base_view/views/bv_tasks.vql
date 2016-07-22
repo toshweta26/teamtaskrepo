@@ -1,0 +1,28 @@
+﻿CREATE OR REPLACE TABLE bv_tasks I18N us_pst (
+        id:int, 
+        task:text, 
+        startdate_0:text, 
+        duedate_0:text, 
+        status:text, 
+        assignedto_0:text, 
+        assignedby_0:text
+    )
+    FOLDER = '/2_base_view'
+    CACHE OFF
+    TIMETOLIVEINCACHE DEFAULT
+    ADD SEARCHMETHOD ds_tasks(
+        I18N us_pst
+        CONSTRAINTS (
+             ADD id (any) OPT ANY
+             ADD task (any) OPT ANY
+             ADD startdate_0 (any) OPT ANY
+             ADD duedate_0 (any) OPT ANY
+             ADD status (any) OPT ANY
+             ADD assignedto_0 (any) OPT ANY
+             ADD assignedby_0 (any) OPT ANY
+        )
+        OUTPUTLIST (assignedby_0, assignedto_0, duedate_0, id, startdate_0, status, task
+        )
+        WRAPPER (custom ds_tasks)
+    );
+
