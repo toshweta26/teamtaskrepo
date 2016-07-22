@@ -1,0 +1,20 @@
+﻿CREATE OR REPLACE TABLE bv_team I18N us_pst (
+        id:int, 
+        contact:text, 
+        role:text
+    )
+    FOLDER = '/2_base_view'
+    CACHE OFF
+    TIMETOLIVEINCACHE DEFAULT
+    ADD SEARCHMETHOD ds_team(
+        I18N us_pst
+        CONSTRAINTS (
+             ADD id (any) OPT ANY
+             ADD contact (any) OPT ANY
+             ADD role (any) OPT ANY
+        )
+        OUTPUTLIST (contact, id, role
+        )
+        WRAPPER (custom ds_team)
+    );
+
